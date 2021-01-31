@@ -13,7 +13,7 @@ class account extends Model{
     }
 
     public function cekid($param){
-        $stmt = "select id from user where username = $param[username]";
+        $stmt = "select * from user where username = '$param[username]'";
         $query = $this->db->query($stmt);
         $result = $this->db->fetch_array($query);
             if((int)$result['id'] < 2){
@@ -21,7 +21,7 @@ class account extends Model{
             } else {
                 return false;
             }
-        
+
     }
 
 	// public function register($param){
