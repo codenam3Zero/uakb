@@ -3,7 +3,7 @@
 
 class daftarUser extends Model{
 	private $daftar = [];
-    
+
 	public function getDataAll(){
         $stmt = "select * from user";
         $query = $this->db->query($stmt);
@@ -14,9 +14,9 @@ class daftarUser extends Model{
         }
         return $data;
 	}
-    
+
     public function getDataByUsername($username){
-        $stmt = "select * from user where id = $username";
+        $stmt = "select * from user where id = '".$username."'";
         $query = $this->db->query($stmt);
         $data = $this->db->fetch_array($query);
         return $data;
