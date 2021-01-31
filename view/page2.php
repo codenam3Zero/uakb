@@ -5,6 +5,6 @@
     <title>Keluar</title>
   </head>
   <body>
-   Selamat Anda Tidak Diterima
+   Selamat Anda Tidak Diterima <?php $data['username'] ?>
   </body>
 </html>
