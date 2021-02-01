@@ -27,7 +27,7 @@ class Home extends Controller{
 				if($this->ac->cekid($_POST)){
 					header('Location: '.BASE_URL.'index.php?r=home/page1/'.$_POST['username']);
 				} else {
-					header('Location: '.BASE_URL.'index.php?r=home/page2'.$_POST['username']);
+					header('Location: '.BASE_URL.'index.php?r=home/page2/'.$_POST['username']);
 				}
 				exit;
 			} else {
@@ -39,13 +39,13 @@ class Home extends Controller{
 	}
 
 	public function page1(){
-		$data = $this->du->getDataByUsername($_GET['username']);
-		$this->loadview('page1', $data);
+		// $data = $this->du->getDataByUsername($_GET['username']);
+		$this->loadview('page1', $_GET);
 	}
 
 	public function page2(){
-		$data = $this->du->getDataByUsername($_GET['username']);
-		$this->loadview('page2', $data);
+		// $data = $this->du->getDataByUsername($_GET['username']);
+		$this->loadview('page2', $_GET);
 	}
 
 	// public function lihatuser($username){

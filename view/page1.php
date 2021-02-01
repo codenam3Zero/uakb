@@ -5,6 +5,6 @@
     <title>Masuk</title>
   </head>
   <body>
-   Selamat Anda Diterima <?php $data['username'] ?>
+   Selamat Anda Diterima <?php echo $_GET['username'] ?>
   </body>
 </html>
